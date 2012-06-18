@@ -2,6 +2,9 @@ package com.gmail.takashi316.sandbox.test;
 
 import android.app.Activity;
 import android.test.ActivityInstrumentationTestCase2;
+import android.util.Log;
+import android.widget.TextView;
+import com.gmail.takashi316.sandbox.R;
 
 import com.gmail.takashi316.sandbox.HelloAndroidActivity;
 
@@ -15,7 +18,7 @@ public class HelloAndroidTestCase extends
 		super(HelloAndroidActivity.class);
 	}// UsersActivityTestCase
 
-	public void test1() {
+	public void testTextViewHello() {
 		this.activity.runOnUiThread(new Runnable() {
 
 			@Override
@@ -23,17 +26,19 @@ public class HelloAndroidTestCase extends
 				getInstrumentation().waitForIdle(null);
 			}
 		});// runOnUiThread
-
-	}// test1
+		Log.v("testTextViewHello",(String) textView.getText());
+		assertEquals(textView.getText(), "Hello World, HelloAndroidActivity!");
+	}// testTextViewHello
 
 	Activity activity;
+	TextView textView;
 
 	@Override
 	protected void setUp() throws Exception {
 		// TODO Auto-generated method stub
 		this.activity = getActivity();
-		// this.buttonResetUsers = (Button) this.usersActivity
-		// .findViewById(R.id.buttonResetUsers);
+		this.textView = (TextView) this.activity
+				.findViewById(R.id.textViewHello);
 		super.setUp();
 	}// setUp
 
