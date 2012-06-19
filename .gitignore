@@ -30,3 +30,6 @@ RCS
 RCSLOG
 SCCS
 _$*
+bin/
+gen/
+
