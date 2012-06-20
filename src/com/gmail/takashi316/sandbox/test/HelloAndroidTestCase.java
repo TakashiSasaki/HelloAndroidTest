@@ -9,7 +9,7 @@ import com.gmail.takashi316.sandbox.R;
 import com.gmail.takashi316.sandbox.HelloAndroidActivity;
 
 /**
- * @author Takashi SASAKI
+ * @author Takashi SASAKI {@link http://twitter.com/TakashiSasaki}
  */
 public class HelloAndroidTestCase extends
 		ActivityInstrumentationTestCase2<HelloAndroidActivity> {
@@ -26,8 +26,8 @@ public class HelloAndroidTestCase extends
 				getInstrumentation().waitForIdle(null);
 			}
 		});// runOnUiThread
-		Log.v("testTextViewHello",(String) textView.getText());
-		assertEquals(textView.getText(), "Hello World, HelloAndroidActivity!");
+		Log.v("testTextViewHello", (String) this.textView.getText());
+		assertEquals(this.textView.getText(), "Hello World, HelloAndroidActivity!");
 	}// testTextViewHello
 
 	Activity activity;
