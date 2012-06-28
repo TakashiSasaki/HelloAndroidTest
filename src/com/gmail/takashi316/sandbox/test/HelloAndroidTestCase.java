@@ -9,14 +9,14 @@ import com.gmail.takashi316.sandbox.R;
 import com.gmail.takashi316.sandbox.HelloAndroidActivity;
 
 /**
- * @author Takashi SASAKI {@link http://twitter.com/TakashiSasaki}
+ * @author Takashi SASAKI {@link "http://twitter.com/TakashiSasaki"}
  */
 public class HelloAndroidTestCase extends
 		ActivityInstrumentationTestCase2<HelloAndroidActivity> {
 
 	public HelloAndroidTestCase() {
 		super(HelloAndroidActivity.class);
-	}// UsersActivityTestCase
+	}// HelloAndroidTestCase
 
 	public void testTextViewHello() {
 		this.activity.runOnUiThread(new Runnable() {
